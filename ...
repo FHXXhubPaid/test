@@ -1,1 +1,37 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"FHXXHUB-1955726580201472457517939-17112223126367202655529","FHXXHUB-2808310899360761585069-281812646420742247723647","FHXXHUB-56397368211342548610307-178226773322621343431671","FHXXHUB-14689325423149514020707-9885257774199840396","FHXXHUB-777423907164042257412555-24040823428999792914520","FHXXHUB-125851132111662130449153-140282150995312947920526","FHXXHUB-613304119411567321679-2148139892098116289092","FHXXHUB-2205513406148542116641-154632698214281296155438","FHXXHUB-447861143109997828439-18821414303552443013514","FHXXHUB-310001701614635234359269-1261512690256272980917681","FHXXHUB-87012553815412175516778-1624519233264371000130202","FHXXHUB-1574827780100732183720043-1643425483800320544713","FHXXHUB-714224941590579166837-108711298218631932621873","FHXXHUB-279342226421117451826673-2788514416126201564523760","FHXXHUB-3224431939288821577711504-11201800012898142885109","FHXXHUB-3261711737160851098628090-91053307243672882718978","FHXXHUB-247953253274612117022210-42162939514780147416225","FHXXHUB-31132539297191751517601-7952116510758245788041","FHXXHUB-155684793982829624995-258668634623658128322","FHXXHUB-27612559851381706925741-305364534224002459711502","FHXXHUB-3002310110264393175831491-2284413432275161151113027","FHXXHUB-210616463264812376629045-30112441142292348224974","FHXXHUB-2841218658224831114127529-10582115130657262429189","FHXXHUB-1180527661138943159328870-2913731998234203254422859","FHXXHUB-133653203350081692520637-1832626735279121257763"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local YesTab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Yes")
